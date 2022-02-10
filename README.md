@@ -1,6 +1,7 @@
 # HKU-UAS-object-detection
 This script is used to detect shape and classify shape using the edge detection.
 
+[![ezgif.com-gif-maker2b1cc5a5dbbb6df2b.gif](https://s10.gifyu.com/images/ezgif.com-gif-maker2b1cc5a5dbbb6df2b.gif)](https://gifyu.com/image/SzmFM)
 
 **Quick Start:**
 1. Initialize a python virtual environment by `pipenv shell`

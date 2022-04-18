@@ -16,7 +16,8 @@ def runDemo(CAM):
             ret, frame = cap.read()
 
             img, gray_rgb, blur, canny_rgb = detector.getShape(frame)
-            screen.get4Frame(img,gray_rgb,blur,canny_rgb)
+            # screen.get4Frame(img,gray_rgb,blur,canny_rgb)
+            screen.getFrame(img)
 
             if cv2.waitKey(1) == ord('q'):
                 break
@@ -26,6 +27,6 @@ def runDemo(CAM):
 
 if __name__ == "__main__":
     # Run it on your webcam
-    runDemo(0)
+    runDemo('rtsp://admin:1qaz!QAZ@192.168.1.64')
     # Run the detection on some video file
     # runDemo('video/triangle.MOV')

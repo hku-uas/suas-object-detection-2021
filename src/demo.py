@@ -1,7 +1,8 @@
-from ObjectDetector.detector import *
-from ObjectDetector.frame import *
+from detector import *
+from frame import *
 
 import cv2
+
 
 def runDemo(CAM):
     # Get Webcam
@@ -25,8 +26,10 @@ def runDemo(CAM):
             print(msg)
             break
 
+
 if __name__ == "__main__":
     # Run it on your webcam
-    runDemo('rtsp://admin:1qaz!QAZ@192.168.1.64')
+    # runDemo('rtsp://admin:1qaz!QAZ@192.168.1.64')
+    runDemo(1)
     # Run the detection on some video file
     # runDemo('video/triangle.MOV')

@@ -1,7 +1,8 @@
 import numpy as np
 import cv2
 
-class Detector():
+
+class Detector:
     def __init__(self):
         # Settings
         self.FONT_SIZE = 2
@@ -14,12 +15,12 @@ class Detector():
 
     def __drawBoudingBox(self, img, contour):
         cnt_x, cnt_y, cnt_w, cnt_h = cv2.boundingRect(contour)
-        cv2.rectangle(img, (cnt_x, cnt_y), (cnt_x+cnt_w,
-                      cnt_y+cnt_h), self.COLOR, self.THICKNESS)
+        cv2.rectangle(img, (cnt_x, cnt_y), (cnt_x + cnt_w,
+                                            cnt_y + cnt_h), self.COLOR, self.THICKNESS)
 
     def __drawContour(self, img, M, area, contour, shape):
-        x = int(M['m10']/M['m00'])
-        y = int(M['m01']/M['m00'])
+        x = int(M['m10'] / M['m00'])
+        y = int(M['m01'] / M['m00'])
 
         cv2.drawContours(img, [contour], 0,
                          self.CONTOURS_COLOR, self.THICKNESS)
@@ -69,8 +70,8 @@ class Detector():
                 # finding center point of shape
                 M = cv2.moments(contour)
                 if M['m00'] != 0.0:
-                    x = int(M['m10']/M['m00'])
-                    y = int(M['m01']/M['m00'])
+                    x = int(M['m10'] / M['m00'])
+                    y = int(M['m01'] / M['m00'])
 
                     # putting shape name at center of each shape
                     if len(approx) == 3:
